@@ -11,7 +11,6 @@ RUN MINICONDA="Miniconda3-latest-Linux-x86_64.sh" && \
 ENV PATH /miniconda/bin:$PATH
 
 RUN conda update -n base conda
-RUN conda install -y -q scikit-learn=0.22 && \
-    conda install -y -q -c deepchem -c rdkit -c conda-forge -c omnia deepchem=2.3.0
+RUN pip install joblib pandas sklearn tensorflow pillow deepchem
 
 RUN pwd && python -c "import deepchem; print(deepchem.__version__)"
