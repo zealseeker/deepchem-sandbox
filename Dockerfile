@@ -12,6 +12,6 @@ ENV PATH /miniconda/bin:$PATH
 
 RUN conda update -n base conda
 RUN conda install -y -q scikit-learn=0.22 && \
-    conda install -y -q -c deepchem -c rdkit -c conda-forge -c omnia deepchem=2.3.0 request=2.23.0
+    conda install -y -q -c deepchem -c rdkit -c conda-forge -c omnia deepchem=2.3.0
 
 RUN pwd && python -c "import deepchem; print(deepchem.__version__)"
