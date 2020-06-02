@@ -13,6 +13,6 @@ ENV PATH /miniconda/bin:$PATH
 RUN conda update -n base conda
 RUN pip install scikit-learn==0.22 && \
     conda install -y -c rdkit rdkit && \
-    pip install joblib pandas tensorflow pillow deepchem
+    conda install -c deepchem -c rdkit -c conda-forge -c omnia deepchem
 
 RUN pwd && python -c "import deepchem; print(deepchem.__version__)"
