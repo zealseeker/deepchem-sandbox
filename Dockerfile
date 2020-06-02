@@ -15,8 +15,7 @@ RUN export LANG=en_US.UTF-8 && \
     git clone https://github.com/deepchem/deepchem.git && \
     cd deepchem && \
     git checkout 2.3.0 && \
-    bash scripts/install_deepchem_conda.sh && \
-    python setup.py develop
+    bash scripts/install_deepchem_conda.sh
 
 # Clean up
 RUN cd deepchem && \
